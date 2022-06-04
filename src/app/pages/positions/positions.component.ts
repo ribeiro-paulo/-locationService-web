@@ -84,7 +84,6 @@ export class PositionsComponent implements OnInit {
   addPP(ppList: any[], poiName: string, posicoes: Position[]) {
     const start = posicoes[0].data
     const end = posicoes[posicoes.length - 1].data
-    console.log(start, posicoes)
     ppList.push({
       poi: poiName,
       start: start,
