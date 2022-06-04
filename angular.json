@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vehiclePosition-app": {
+    "locationservice-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "vehiclePosition-app:build:production"
+              "browserTarget": "locationservice-web:build:production"
             },
             "development": {
-              "browserTarget": "vehiclePosition-app:build:development"
+              "browserTarget": "locationservice-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vehiclePosition-app:build"
+            "browserTarget": "locationservice-web:build"
           }
         },
         "test": {
@@ -109,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "vehiclePosition-app"
+  "defaultProject": "locationservice-web"
 }
