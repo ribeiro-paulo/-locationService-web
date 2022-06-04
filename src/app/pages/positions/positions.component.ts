@@ -30,7 +30,6 @@ export class PositionsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loaderService.isLoading.next(true);
     this.loadPois();
     this.loadBoard();
   }
@@ -41,13 +40,13 @@ export class PositionsComponent implements OnInit {
 
   loadBoard() {
     this.BoardService.getBoards().subscribe(res => {
+      this.loaderService.isLoading.next(true);
       this.boards = res;
       this.loadPositions();
     });
   }
 
   loadPositions() {
-    this.loaderService.isLoading.next(true);
     this.posicaoService.getPositions(this.board, this.date).subscribe(res => {
       this.boards.forEach(board => {
         this.positionsBoards.push({
@@ -85,6 +84,7 @@ export class PositionsComponent implements OnInit {
   addPP(ppList: any[], poiName: string, posicoes: Position[]) {
     const start = posicoes[0].data
     const end = posicoes[posicoes.length - 1].data
+    console.log(start, posicoes)
     ppList.push({
       poi: poiName,
       start: start,
