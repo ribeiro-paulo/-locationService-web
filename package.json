@@ -1,5 +1,5 @@
 {
-  "name": "vehicle-position-app",
+  "name": "location-service-web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -44,5 +44,8 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.6.2"
-  }
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
+ }
 }
