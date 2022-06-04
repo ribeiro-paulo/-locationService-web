@@ -22,8 +22,8 @@ export class PositionService {
     if(date){
       newDate = moment(date).format('MM/DD/YYYY');
     }
-    let parameter = board && date ? `?placa=${ board }&data=${ date }` : board ? `?placa=${ board }` : date ? `?data=${ newDate }` : `` ;
-    return this.httpClient.get<Position[]>(`${environment.apiURL}${this.url}${ parameter }`)
+    let p = board && date ? `?placa=${ board }&data=${ date }` : board ? `?placa=${ board }` : date ? `?data=${ newDate }` : `` ;
+    return this.httpClient.get<Position[]>(`${environment.apiURL}${this.url}${ p }`)
       .pipe(
         retry(2),
         catchError(this.handleError))
